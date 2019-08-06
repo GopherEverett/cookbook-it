@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'django_extensions',
-    'tunr_app',
+    'cookbook_app',
 ]
 
 MIDDLEWARE = [
