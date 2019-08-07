@@ -11,6 +11,7 @@ class Cookbook(models.Model):
 
 class Recipe(models.Model):
     name = models.CharField(max_length=255)
+    
     cookbook = models.ForeignKey(Cookbook, on_delete=models.CASCADE, related_name='recipes')
 
     def __str__(self):

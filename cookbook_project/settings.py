@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'cookbook_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'sample_database',
+        'NAME': 'reactdjangoteam',
         'USER': 'sample',
         'PASSWORD': 'sample',
         'HOST': 'localhost'
