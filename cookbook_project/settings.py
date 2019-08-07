@@ -84,7 +84,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'reactdjangoteam',
-        'USER': 'sample',
+        'USER': 'johnjacobs',
         'PASSWORD': 'sample',
         'HOST': 'localhost'
     }

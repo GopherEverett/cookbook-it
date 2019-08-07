@@ -17,4 +17,4 @@ class CookbookSerializer(serializers.ModelSerializer):
     recipes = RecipeSerializer(many=True, read_only=True)
     class Meta:
         model = Cookbook
-        fields = ('id',  'title', 'editor', 'year_published')
+        fields = ('id',  'title', 'editor', 'year_published', 'recipes')
