@@ -14,7 +14,9 @@ class App extends Component {
           <div>
             <h1>Cookbook-It</h1>
             <div>
-              <div><Link to="/">All Cookbooks</Link></div>
+                <Link to="/">
+                  <h2>All Cookbooks</h2>
+                </Link>
             </div>
           </div>
 

@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import AddCookbookForm from './AddCookbookForm'
 
 
 
 export default class CookbookList extends Component {
     state = {
         cookbooks: [],
-        error: ''
+        error: '',
+        isAddFormDisp: false,
     }
 
     componentDidMount() {
@@ -25,6 +27,12 @@ export default class CookbookList extends Component {
         }
     }
 
+    toggleAddForm = () => {
+        this.setState((state) => {
+            return ({ isAddFormDisp: !state.isAddFormDisp })
+        })
+    }
+
     render() {
         if (this.state.error) {
             return <div>{this.state.error}</div>
@@ -34,9 +42,12 @@ export default class CookbookList extends Component {
                 <h1>All Cookbooks</h1>
                 {this.state.cookbooks.map((cookbook) => (
                     <div key={cookbook.id}>
-                        <Link to={`/cookbook/${cookbook.id}`}>{cookbook.title}</Link>
+                        <Link to={`/cookbook/${cookbook.id}`}><h2>{cookbook.title}</h2></Link>
                     </div>
                 ))}
+                {this.state.isAddFormDisp ? 
+                <AddCookbookForm fetch={this.fetchCookboooks} formtoggle={this.toggleAddForm} /> : <button onClick={this.toggleAddForm}>Add Cookbook</button>
+                }
             </div>
         );
     }
