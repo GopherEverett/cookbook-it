@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
 import axios from 'axios';
+import { Link } from 'react-router-dom'
 
 export default class Cookbook extends Component {
     state = {
-        cookbook: {}
+        cookbook: {
+            recipes: []
+        }
     }
     componentDidMount() {
-        const cookbookId = this.props.match.params.id 
+        const cookbookId = this.props.match.params.id
         this.fetchCookbook(cookbookId)
     }
 
@@ -25,7 +28,16 @@ export default class Cookbook extends Component {
     render() {
         return (
             <div>
+                <img src={this.state.img_url} alt="" />
                 <h1>{this.state.cookbook.title}</h1>
+                {console.log(this.state.cookbook.recipes)}
+                {this.state.cookbook.recipes.map(recipe => (
+                    <div key={recipe.id}>
+                        <Link to={`/recipes/${recipe.id}`}>
+                            <h4>{recipe.name}</h4>
+                        </Link>
+                    </div>
+                ))}
             </div>
         )
     }

@@ -9,7 +9,6 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-
           <div>
             <h1>Cookbook-It</h1>
             <div>

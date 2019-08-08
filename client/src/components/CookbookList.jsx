@@ -34,7 +34,7 @@ export default class CookbookList extends Component {
                 <h1>All Cookbooks</h1>
                 {this.state.cookbooks.map((cookbook) => (
                     <div key={cookbook.id}>
-                        <Link to={`/cookbook/${cookbook.id}`} >{cookbook.title}</Link>
+                        <Link to={`/cookbook/${cookbook.id}`}>{cookbook.title}</Link>
                     </div>
                 ))}
             </div>
