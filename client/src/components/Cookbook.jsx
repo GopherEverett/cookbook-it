@@ -28,12 +28,13 @@ export default class Cookbook extends Component {
     render() {
         return (
             <div>
-                <img src={this.state.img_url} alt="" />
+                <img src={this.state.cookbook.img_url} alt="" />
                 <h1>{this.state.cookbook.title}</h1>
-                {console.log(this.state.cookbook.recipes)}
+                <h3>Editor: {this.state.cookbook.editor} - Published:  {this.state.cookbook.year_published}</h3>
+                <h3>Recipes: </h3>
                 {this.state.cookbook.recipes.map(recipe => (
                     <div key={recipe.id}>
-                        <Link to={`/recipes/${recipe.id}`}>
+                        <Link to={`/recipe/${recipe.id}`}>
                             <h4>{recipe.name}</h4>
                         </Link>
                     </div>
