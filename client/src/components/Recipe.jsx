@@ -37,13 +37,13 @@ export default class Recipe extends Component {
                 <h2>Ingredients:</h2>
                 {this.state.recipe.ingredients.map(ingredient => (
                     <div key={ingredient.id}>
-                        <Link to={`/ingredient/${ingredient.id}`}>
+                        <Link className="dumb" to={`/ingredient/${ingredient.id}`}>
                             <h4>{ingredient.name}</h4>
                         </Link>
                     </div>
                 ))}
                 <h2>Directions:</h2>
-                <p>{this.state.recipe.directions}</p>
+                <p className='card'>{this.state.recipe.directions}</p>
             </div>
         )
     }

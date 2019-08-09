@@ -36,11 +36,13 @@ export default class AddCookbookForm extends Component {
         return (
             <div>
                 <form onSubmit={this.createCookbook}>
-                    <input type="text" name="title" id="" placeholder="title" onChange={this.handleChange} />
-                    <input type="text" name="img_url" id="" placeholder="image url" onChange={this.handleChange} />
-                    <input type="text" name="editor" id="" placeholder="edited by" onChange={this.handleChange} />
-                    <input type="date" name="year_published" id="" onChange={this.handleChange} />
-                    <button>Submit</button>
+                    <div className="form-group">
+                        <input className="form-control form-control-lg" type="text" name="title" id="" placeholder="title" onChange={this.handleChange} />
+                        <input className="form-control form-control-lg"  type="text" name="img_url" id="" placeholder="image url" onChange={this.handleChange} />
+                        <input className="form-control form-control-lg"  type="text" name="editor" id="" placeholder="edited by" onChange={this.handleChange} />
+                        <input className="form-control form-control-lg"  type="date" name="year_published" id="" onChange={this.handleChange} />
+                        <button className="btn btn-success">Submit</button>
+                    </div>
                 </form>
             </div>
         )

@@ -11,20 +11,22 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <div>
+          <div className='navbar'>
             <h1>Cookbook-It</h1>
             <div>
-                <Link to="/">
-                  <h2>All Cookbooks</h2>
-                </Link>
+              <Link to="/" className="dumb">
+                <h2>All Cookbooks</h2>
+              </Link>
             </div>
           </div>
 
           <Switch>
-            <Route exact path="/" component={CookbookList} />
-            <Route path="/cookbook/:id" component={Cookbook} />
-            <Route path="/recipe/:id" component={Recipe} />
-            <Route path="/ingredient/:id" component={Ingredient} />
+            <div className="main">
+              <Route exact path="/" component={CookbookList} />
+              <Route path="/cookbook/:id" component={Cookbook} />
+              <Route path="/recipe/:id" component={Recipe} />
+              <Route path="/ingredient/:id" component={Ingredient} />
+            </div>
           </Switch>
         </div>
       </Router>

@@ -42,11 +42,11 @@ export default class CookbookList extends Component {
                 <h1>All Cookbooks</h1>
                 {this.state.cookbooks.map((cookbook) => (
                     <div key={cookbook.id}>
-                        <Link to={`/cookbook/${cookbook.id}`}><h2>{cookbook.title}</h2></Link>
+                        <Link className="dumb" to={`/cookbook/${cookbook.id}`}><h2>{cookbook.title}</h2></Link>
                     </div>
                 ))}
                 {this.state.isAddFormDisp ? 
-                <AddCookbookForm fetch={this.fetchCookboooks} formtoggle={this.toggleAddForm} /> : <button onClick={this.toggleAddForm}>Add Cookbook</button>
+                <AddCookbookForm fetch={this.fetchCookboooks} formtoggle={this.toggleAddForm} /> : <button className="btn btn-primary" onClick={this.toggleAddForm}>Add Cookbook</button>
                 }
             </div>
         );
