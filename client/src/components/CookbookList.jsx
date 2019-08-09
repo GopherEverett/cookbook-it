@@ -39,10 +39,10 @@ export default class CookbookList extends Component {
         }
         return (
             <div>
-                <h1>All Cookbooks</h1>
+                <h2>All Cookbooks</h2>
                 {this.state.cookbooks.map((cookbook) => (
                     <div key={cookbook.id}>
-                        <Link className="dumb" to={`/cookbook/${cookbook.id}`}><h2>{cookbook.title}</h2></Link>
+                        <Link className="dumb" to={`/cookbook/${cookbook.id}`}>{cookbook.title}</Link>
                     </div>
                 ))}
                 {this.state.isAddFormDisp ? 

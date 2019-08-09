@@ -32,13 +32,13 @@ export default class Recipe extends Component {
     render() {
         return (
             <div>
-                <h1>{this.state.recipe.name}</h1>
+                <h2>{this.state.recipe.name}</h2>
                 <img src={this.state.recipe.img_url} alt="" />
                 <h2>Ingredients:</h2>
                 {this.state.recipe.ingredients.map(ingredient => (
                     <div key={ingredient.id}>
                         <Link className="dumb" to={`/ingredient/${ingredient.id}`}>
-                            <h4>{ingredient.name}</h4>
+                            {ingredient.name}
                         </Link>
                     </div>
                 ))}

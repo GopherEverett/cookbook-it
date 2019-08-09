@@ -45,14 +45,14 @@ export default class Cookbook extends Component {
         return (
             <div>
                 <img src={this.state.cookbook.img_url} alt="" />
-                <h1>{this.state.cookbook.title}</h1>
+                <h2>{this.state.cookbook.title}</h2>
                 <h3>Editor: {this.state.cookbook.editor}  Published:  {this.state.cookbook.year_published}</h3>
                 <button className="btn btn-danger" onClick={this.handleDelete}>Delete</button>
-                <h3>Recipes: </h3>
+                <h2>Recipes: </h2>
                 {this.state.cookbook.recipes.map(recipe => (
                     <div key={recipe.id}>
                         <Link className="dumb" to={`/recipe/${recipe.id}`}>
-                            <h4>{recipe.name}</h4>
+                            {recipe.name}
                         </Link>
                     </div>
                 ))}
