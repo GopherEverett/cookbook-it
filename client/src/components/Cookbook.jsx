@@ -44,8 +44,8 @@ export default class Cookbook extends Component {
         }
         return (
             <div>
-                <img src={this.state.cookbook.img_url} alt="" />
                 <h2>{this.state.cookbook.title}</h2>
+                <img src={this.state.cookbook.img_url} alt="" />
                 <h3>Editor: {this.state.cookbook.editor}  Published:  {this.state.cookbook.year_published}</h3>
                 <button className="btn btn-danger" onClick={this.handleDelete}>Delete</button>
                 <h2>Recipes: </h2>
